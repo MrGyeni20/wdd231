@@ -5,9 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chamber of Commerce for Takoradi,Ghana">
     <meta name="author" content="Nana Kwesi Gyeni">
-    <title>Takoradi Chamber Of Commerce</title>
+
+    <title> Takoradi Chamber Directory </title>
+   <!-- Favicon -->
+   <link rel="icon" href="images/favicon.ico"  />
+   <!--Css-->
+   <link rel="stylesheet" href="styles/normalize.css">
+   <link rel="stylesheet" href="styles/directory.css">
 </head>
+
 <body>
+  <header>
+    <h1> Takoradi Chamber Of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="chamber-index.html">Home</a></li>
+        <li><a href="directory.html"></a>Directory</li>
+        <li><a href="#"></a>Join</li>
+        <li><a href="#"></a>Discover</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="view-toggle">
+      <button id="grid-view">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+
+      <section id="members-container" class="grid">
+      <!-- JavaScript will inject member cards or list items here -->
+    </section>
+  </main>
     
+ <footer>
+    <p>Contact: info@yourcitychamber.org | (123) 456-7890</p>
+    <p>&copy; <span id="currentyear"></span> | Nana Kwesi Gyeni | WDD 231 Chamber Directory Page</p>
+    <p>Last Updated: <span id="last-modified"></span></p>
+  </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>l

@@ -1,3 +1,9 @@
+// ========== INITIAL LOAD ==========
+getMembers();
+getWeather();
+loadSpotlights();
+
+
 // ========== MEMBER DIRECTORY ==========
 const membersContainer = document.getElementById("members");
 
@@ -22,12 +28,15 @@ async function getMembers() {
     displayMembers(members);
   } catch (error) {
     console.error("Error loading members:", error);
-    membersContainer.innerHTML = "<p>Unable to load members at this time.</p>";
+    if (membersContainer) {
+      membersContainer.innerHTML = "<p>Unable to load members at this time.</p>";
+    }
   }
 }
 
 // Display member cards
 function displayMembers(members) {
+  if (!membersContainer) return;
   membersContainer.innerHTML = ""; // Clear previous content
 
   members.forEach(member => {
@@ -51,51 +60,63 @@ function displayMembers(members) {
 }
 
 // ========== GRID / LIST TOGGLE ==========
-document.getElementById("grid-view").addEventListener("click", () => {
-  membersContainer.classList.add("grid-view");
-  membersContainer.classList.remove("list-view");
-});
+const gridBtn = document.getElementById("grid-view");
+const listBtn = document.getElementById("list-view");
 
-document.getElementById("list-view").addEventListener("click", () => {
-  membersContainer.classList.add("list-view");
-  membersContainer.classList.remove("grid-view");
-});
+if (gridBtn && listBtn && membersContainer) {
+  gridBtn.addEventListener("click", () => {
+    membersContainer.classList.add("grid-view");
+    membersContainer.classList.remove("list-view");
+  });
+
+  listBtn.addEventListener("click", () => {
+    membersContainer.classList.add("list-view");
+    membersContainer.classList.remove("grid-view");
+  });
+}
 
 // ========== FOOTER YEAR & LAST MODIFIED ==========
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+const yearEl = document.getElementById("year");
+const lastModifiedEl = document.getElementById("lastModified");
+
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
 
 // ========== WEATHER ==========
-const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
 const city = 'Rexburg';
 const weatherContainer = document.getElementById('current-weather');
 const forecastContainer = document.getElementById('forecast');
 
 async function getWeather() {
   try {
-    // Current weather
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`);
     const data = await response.json();
 
-    weatherContainer.innerHTML = `
-      <p><strong>Temp:</strong> ${data.main.temp}°F</p>
-      <p><strong>Conditions:</strong> ${data.weather[0].description}</p>
-    `;
+    if (weatherContainer) {
+      weatherContainer.innerHTML = `
+        <p><strong>Temp:</strong> ${data.main.temp}°F</p>
+        <p><strong>Conditions:</strong> ${data.weather[0].description}</p>
+      `;
+    }
 
-    // 3-day forecast
     const forecastRes = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`);
     const forecastData = await forecastRes.json();
     const forecastDays = [forecastData.list[7], forecastData.list[15], forecastData.list[23]];
 
-    forecastContainer.innerHTML = '<h3>3-Day Forecast</h3>';
-    forecastDays.forEach(day => {
-      forecastContainer.innerHTML += `
-        <p>${new Date(day.dt_txt).toLocaleDateString()}: ${day.main.temp}°F</p>
-      `;
-    });
+    if (forecastContainer) {
+      forecastContainer.innerHTML = '<h3>3-Day Forecast</h3>';
+      forecastDays.forEach(day => {
+        forecastContainer.innerHTML += `
+          <p>${new Date(day.dt_txt).toLocaleDateString()}: ${day.main.temp}°F</p>
+        `;
+      });
+    }
   } catch (error) {
     console.error("Error loading weather:", error);
-    weatherContainer.innerHTML = `<p>Error loading weather data</p>`;
+    if (weatherContainer) {
+      weatherContainer.innerHTML = `<p>Error loading weather data</p>`;
+    }
   }
 }
 
@@ -107,13 +128,11 @@ async function loadSpotlights() {
     const response = await fetch("data/members.json");
     const members = await response.json();
 
-    // Filter only Gold and Silver members
     const eligible = members.filter(member => {
       const level = getMembershipLevel(member.membership);
       return level === "Gold" || level === "Silver";
     });
 
-    // Shuffle and select 3
     const shuffled = eligible.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
@@ -137,11 +156,36 @@ async function loadSpotlights() {
 
   } catch (error) {
     console.error("Error loading spotlight members:", error);
-    spotlightContainer.innerHTML = `<p>Unable to load spotlight members at this time.</p>`;
+    if (spotlightContainer) {
+      spotlightContainer.innerHTML = `<p>Unable to load spotlight members at this time.</p>`;
+    }
   }
 }
 
+// ========== HERO SLIDESHOW ==========
+let currentSlide = 0;
+const slides = document.querySelectorAll(".hero-slideshow .slide");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) slide.classList.add("active");
+  });
+}
+
+function startSlideshow() {
+  if (slides.length === 0) return;
+  showSlide(currentSlide);
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 5000); // Change slide every 5 seconds
+}
+
 // ========== INITIAL LOAD ==========
-getMembers();
-getWeather();
-loadSpotlights();
+window.addEventListener("load", () => {
+  getMembers();
+  getWeather();
+  loadSpotlights();
+  startSlideshow();
+});

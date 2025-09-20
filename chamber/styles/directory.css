@@ -1,0 +1,342 @@
+/* ========== GENERAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  background-color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ========== COLORS ========== */
+:root {
+  --primary-blue: #003366;
+  --accent-blue: #007acc;
+  --white: #ffffff;
+  --black: #000000;
+  --light-gray: #f0f0f0;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+header {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header .logo {
+  width: 60px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-blue);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #005fa3;
+}
+
+/* ========== HERO SLIDESHOW ========== */
+.hero-slideshow {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.hero-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slideshow .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.cta-button:hover {
+  background-color: #005fa3;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  padding: 2rem;
+}
+
+/* ========== EVENTS & WEATHER ========== */
+section h2 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+#current-weather,
+#forecast {
+  background-color: var(--light-gray);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent-blue);
+}
+
+/* ========== DIRECTORY GRID/LIST ========== */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.view-toggle button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-toggle button:hover {
+  background-color: #005fa3;
+}
+
+#members-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+#members-container.list {
+  display: block;
+}
+
+.member-card {
+  background-color: var(--white);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+  max-width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.membership-level.gold {
+  color: gold;
+  font-weight: bold;
+}
+
+.membership-level.silver {
+  color: silver;
+  font-weight: bold;
+}
+
+.membership-level.member {
+  color: #333;
+}
+
+/* ========== SPOTLIGHT SECTION ========== */
+.spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.spotlight-card {
+  flex: 1 1 250px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    left: 2%;
+    right: 2%;
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Container styles */
+#members {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Grid and List view toggles */
+#members.grid-view {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+#members.list-view {
+  display: block;
+}
+
+/* Member card */
+.member-card {
+  background-color: #ffffff; /* white background */
+  border: 2px solid #003366; /* dark blue border */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  color: #000000; /* black text */
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image styling */
+.member-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+/* Headings and text */
+.member-card h3 {
+  color: #003366; /* dark blue heading */
+  margin-bottom: 0.5rem;
+}
+
+.member-card p,
+.member-card a {
+  font-size: 0.95rem;
+  color: #000000;
+  margin-bottom: 0.4rem;
+}
+
+.member-card a {
+  color: #0066cc; /* blue links */
+  text-decoration: none;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+
+/* Membership level badges */
+.membership-level {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #ffffff;
+}
+
+.membership-level.gold {
+  background-color: #ffd700; /* gold */
+  color: #000; /* black text on gold */
+}
+
+.membership-level.silver {
+  background-color: #c0c0c0; /* silver */
+  color: #000;
+}
+
+.membership-level.member {
+  background-color: #003366; /* dark blue */
+}

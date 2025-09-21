@@ -85,8 +85,8 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
 
 // ========== WEATHER ==========
-const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
-const city = 'Rexburg';
+const apiKey = 'bd4809ef1d510416ed6de8998bbb9686'; // Replace with your actual API key
+const city = 'Takoradi';
 const weatherContainer = document.getElementById('current-weather');
 const forecastContainer = document.getElementById('forecast');
 

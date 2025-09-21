@@ -1,0 +1,141 @@
+/* Reset basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+header span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Hamburger menu button */
+#menuBtn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Navigation styles */
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #444;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Show menu when active (via JS) */
+nav.show {
+  display: flex;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Course filter buttons */
+#course-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#course-controls button {
+  flex: 1 1 30%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #004080;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#course-controls button:hover {
+  background-color: #0059b3;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+footer div {
+  margin-top: 0.5rem;
+}
+
+footer a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: underline;
+}

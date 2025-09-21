@@ -1,0 +1,204 @@
+/* ======= BASE STYLES ======= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #000;
+  line-height: 1.6;
+}
+
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #001f3f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== Hero Slideshow ===== */
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slideshow .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* ===== Section Styles ===== */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* ===== Events and Weather in a Flex Row ===== */
+.events-weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.events-weather-container section {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ===== Weather Styles ===== */
+#current-weather, #forecast {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+/* ===== Member Directory ===== */
+#members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.member-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.membership-level.gold {
+  color: gold;
+  font-weight: bold;
+}
+
+.membership-level.silver {
+  color: silver;
+  font-weight: bold;
+}
+
+.membership-level.member {
+  color: black;
+}
+
+/* ===== Spotlight Cards ===== */
+.spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.spotlight-card {
+  flex: 1 1 250px;
+  padding: 1rem;
+  background-color: #eef2ff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.spotlight-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

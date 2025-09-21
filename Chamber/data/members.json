@@ -1,0 +1,74 @@
+[
+  {
+    "name": "The Palms Eagles Alliance Hotel",
+    "address": "Beach Road, Whale Avenue",
+    "phone": "+233 55 000 0222",
+    "website": "https://www.takoradithepalmsbyeagles.com",
+    "image": "eagles-photo.jpg",
+    "membership": 3,
+    "description": "Features a pool, positive customer reviews for its food and service, and offers reasonable pricing."
+  },
+  {
+    "name": "Stanbic Bank",
+    "address": "Market Circle, PMB 39",
+    "phone": "031 203 0542",
+    "website": "https://www.stanbicbankghanaonline.com",
+    "image": "stanbic-photo.jpg",
+    "membership": 3,
+    "description": "Provides good banking services and customer service."
+  },
+  {
+    "name": "Ecobank",
+    "address": "Plot No. 34, Axim Road, Harbour Commercial Area, PMB",
+    "phone": "031 202 1250",
+    "website": "https://ecobankonline.com",
+    "image": "ecobank-photo.jpg",
+    "membership": 2,
+    "description": "Ecobank offers a full range of personal and business banking services, including current and savings accounts, loans, investments, mobile and internet banking, and mobile money."
+  },
+  {
+    "name": "Atlantic Hotel",
+    "address": "Beach Road Area, DTD",
+    "phone": "031 200 2700",
+    "website": "https://www.bestwesternplushotel.com",
+    "image": "atlantic-photo.jpg",
+    "membership": 3,
+    "description": "The Atlantic Hotel in Takoradi is now the Best Western Plus Serene Atlantic Hotel. It's a well-known, historic four-star hotel that re-opened in 2013 after extensive renovations and offers amenities like pools, a golf course, and ocean views. The hotel is a popular choice for both business and leisure travelers in Ghana's Western Region."
+  },
+  {
+    "name": "Takoradi Golf Course",
+    "address": "V6HV+Q5V, Dixcove Road, Takoradi",
+    "phone": "059 505 2055",
+    "website": "https://www.takoradigolfcourse.com",
+    "image": "Golf-photo.jpg",
+    "membership": 3,
+    "description": "It has been noted for having a big space for outdoor programs and good customer service."
+  },
+  {
+    "name": "Country Club",
+    "address": "V6JJ+JWW, Takoradi",
+    "phone": "031 200 2381",
+    "website": "https://www.takkoradicountryclub.com",
+    "image": "country-photo.jpg",
+    "membership": 2,
+    "description": "The Country Club is a culinary haven located in the heart of Takoradi, Ghana. This restaurant invites tourists to indulge in an array of delectable dishes."
+  },
+  {
+    "name": "Snap Finger Restaurant",
+    "address": "Chief Ainoo Ave",
+    "phone": "+233 054 742 2474",
+    "website": "https://www.snapfingerrestaurant.com",
+    "image": "snap-photo.jpg",
+    "membership": 2,
+    "description": "Snap Finger Restaurant in Takoradi is a fast-food eatery known for serving a variety of local and continental dishes, including Chinese and African cuisine. Located on Chief Ainoo Avenue, it offers options for dine-in, takeout, and delivery."
+  },
+  {
+    "name": "Takoradi Mall",
+    "address": "27 Independence Ave, Takoradi",
+    "phone": "050 358 5079",
+    "website": "https://www.takoradimall.com",
+    "image": "mall-photo.jpg",
+    "membership": 3,
+    "description": "Takoradi Mall is a modern shopping center in Takoradi, Ghana, that first opened in 2018. As the only mall of its kind in Ghana's Western and Central regions, it offers a variety of local and international shops and services."
+  }
+]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 231 Course Home Page - Nana Kwesi Gyeni" />
+  <meta name="author" content="Nana Kwesi Gyeni" />
+  <title>WDD 231 - Home</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=YourFontChoice&display=swap" rel="stylesheet" />
+
+  <!-- JavaScript -->
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/BYU-Logo.svg" alt="BYU-Idaho Logo" />
+    <span>Nana Kwesi Gyeni</span>
+    <button id="menuBtn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  </header>
+
+  <nav id="navMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="chamber-project.html">Chamber</a>
+    <a href="final-project.html">Final</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+        My name is Nana Kwesi Gyeni. I am twenty years of age and a student in WDD231 Web Frontend Development I. 
+        I am from Ghana and currently living in Liverpool, England.
+      </p>
+      <p>
+        I am a member of the Presbyterian Church and the Church of Jesus Christ. My hobbies include playing basketball, 
+        coaching my church youth football team, playing video games, reading novels, and watching anime. I occasionally enjoy visiting resorts, hotels and restaurants to enjoy food of different variety.
+      </p>
+      <p>
+        I also enjoy participating in charitable events and spreading the gospel of Jesus Christ.
+        I want to build modern, responsive websites using HTML, CSS, and JavaScript with a strong foundation in design and accessibility.
+        My biggest aim is to start a Software and Tech Company under a corporation or group of my own.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Student Photo</h2>
+      <img src="images/my-picture.jpg" alt="A picture of Nana Kwesi Gyeni" loading="lazy" />
+    </section>
+
+    <section class="card">
+      <h2>Web Development Certificate Courses</h2>
+
+      <div id="course-controls">
+        <button id="showAll">All</button>
+        <button id="showWDD">WDD</button>
+        <button id="showCSE">CSE</button>
+      </div>
+
+      <div id="coursesContainer"></div>
+
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Nana Kwesi Gyeni | Takoradi, Ghana</p>
+    <p id="lastModified"></p>
+    <div>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>

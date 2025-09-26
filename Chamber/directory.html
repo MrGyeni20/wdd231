@@ -2,62 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content=" Welcome to the  Takoradi Chamber of Commerce Directory- your gateway to trade, investement, and business growth in Ghana's Western Region. Join our thriving business network." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Welcome to the Takoradi Chamber of Commerce Directory - your gateway to trade, investment, and business growth in Ghana's Western Region. Join our thriving business network." />
   <meta name="author" content="Nana Kwesi Gyeni" />
 
   <meta property="og:title" content="Takoradi Chamber of Commerce" />
   <meta property="og:description" content="Promoting business and economic growth in Takoradi" />
-  <meta property="og:image" content= "https://mrgyeni20.github.io/wdd231/chamber/images/test22.jpg" />
+  <meta property="og:image" content="https://mrgyeni20.github.io/wdd231/chamber/images/test22.jpg" />
   <meta property="og:url" content="https://mrgyeni20.github.io/wdd231/chamber/directory.html" />
 
   <title>Takoradi Commerce Directory</title>
-  
+
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" />
 
-  <!-- Google Fonts Embed -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 
-  
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/directory.css" />
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <img src="images/test2.jpg" alt="Takoradi Chamber of Commerce Logo" class="logo" />
-  
-    <nav>
+    <nav role="navigation" aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="#">Join</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
         <li><a href="#">Discover</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" role="main">
     <h1>Takoradi Commerce Directory</h1>
 
-    <div class="view-toggle">
-      <button id="grid-view">Grid View</button>
-      <button id="list-view">List View</button>
+    <div class="view-toggle" role="region" aria-label="Toggle between grid and list view">
+      <button id="grid-view" aria-pressed="true" aria-controls="members-container">Grid View</button>
+      <button id="list-view" aria-pressed="false" aria-controls="members-container">List View</button>
     </div>
 
-    <section id="members-container" class="grid">
+    <section id="members-container" class="grid-view" aria-live="polite" aria-label="Directory members">
       <!-- JavaScript will inject member cards here -->
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>Contact: info@chambercity.org | (231) 020 225 1257</p>
     <p>&copy; <span id="year"></span> | Nana Kwesi Gyeni | WDD 231 Chamber Directory Page</p>
-    <p>Last Updated: <span id="lastModified"></span></p>
+    <p>Last Updated: <time id="lastModified"></time></p>
   </footer>
 
   <script src="scripts/directory.js" defer></script>

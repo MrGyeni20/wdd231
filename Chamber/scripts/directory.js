@@ -69,13 +69,20 @@ if (gridBtn && listBtn && membersContainer) {
   gridBtn.addEventListener("click", () => {
     membersContainer.classList.add("grid-view");
     membersContainer.classList.remove("list-view");
+
+    gridBtn.setAttribute("aria-pressed", "true");
+    listBtn.setAttribute("aria-pressed", "false");
   });
 
   listBtn.addEventListener("click", () => {
     membersContainer.classList.add("list-view");
     membersContainer.classList.remove("grid-view");
+
+    listBtn.setAttribute("aria-pressed", "true");
+    gridBtn.setAttribute("aria-pressed", "false");
   });
 }
+
 
 // ========== FOOTER YEAR & LAST MODIFIED ==========
 const yearEl = document.getElementById("year");

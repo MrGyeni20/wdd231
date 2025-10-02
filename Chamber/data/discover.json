@@ -1,0 +1,57 @@
+[
+    {
+        "name":"Bisa Aberwa Museum",
+        "image": "Bisa-photo.webp",
+        "address":"Sekondi",
+        "description":"Bisa Abrewa Museum is a museum with sculptural representations of wood, clay, cement, paintings and photographs in Nkontompo in the Sekondi-Takoradi Metropolis of the Western Region, Ghana. The museum  has about Two thousand and two hundred artifacts relating to heroes of Africa."
+    },
+    
+    {
+        "name":" Coast Castle",
+        "image": "",
+        "address":"Victoria Road",
+        "description":"The Coast Castle is one of about forty 'slave castles', or large commercial forts, built on the Gold Coast of West Africa by European traders. It was originally a Portuguese 'feitoria' or trading post, established in 1555, which was named Cabo Corso."
+    },
+
+     {
+        "name":"",
+        "image": "",
+        "address":"",
+        "description":""
+    },
+
+     {
+        "name":"African Beach",
+        "image": "",
+        "address":"",
+        "description":""
+    },
+
+     {
+        "name":"",
+        "image": "",
+        "address":"",
+        "description":""
+    },
+
+     {
+        "name":"",
+        "image": "",
+        "address":"",
+        "description":""
+    },
+
+     {
+        "name":"",
+        "image": "",
+        "address":"",
+        "description":""
+    },
+
+     {
+        "name":"",
+        "image": "",
+        "address":"",
+        "description":""
+    }
+]

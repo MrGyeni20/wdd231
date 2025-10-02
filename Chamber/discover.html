@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Nana Kwesi Gyeni" />
+
+  <title>Discover The Paradise</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/directory.css" />
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <header role="banner">
+    <img src="images/test2.jpg" alt="Takoradi Chamber of Commerce Logo" class="logo" />
+    <h1>Discover The Paradise</h1>
+    <nav role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="discover-grid">
+    <h2> The Paradise</h2>
+    <!-- Sidebar for Visit Message -->
+    <aside class="sidebar">
+      <div id="visitMessage">Loading your visit info...</div>
+    </aside>
+
+    <section class="cards" id="cardContainer">
+      <!-- Cards will be inserted here dynamically using JS + JSON -->
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span id="year"></span> | Takoradi Chamber of Commerce | WDD 231 Chamber Home Page</p>
+    <p>Contact us at info@chambercity.org</p>
+    <p>Last Updated: <time id="lastModified"></time></p>
+  </footer>
+</body>
+</html>

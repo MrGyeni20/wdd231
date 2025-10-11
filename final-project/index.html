@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="Nana Kwesi Gyeni" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the home for food enthusiasts, discover delicious recipes, cooking tips, and meal ideas " />
+     <meta name="author" content="Nana Kwesi Gyeni">
     <title>Tasty Delights| Home</title>
+    <link rel="stylesheet" href="styles/recipe.css"> 
+    <link rel="stylesheet" href="styles/slides.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/recipe-logo.webp" alt="Tasty Delights logo">
+        <h1>Welcome To The World Of Tasty Recipes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe-search.html">Search Recipes</a></li>
+                <li><a href="detail-recipe.html">Detailed Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!--Css-->
-    <link rel="stylesheet" href="styles/recipe.css">
+    <main>
+      <section class="hero">
+     <h2>About Us</h2>
+       <img src="images/main-dish1.webp" alt="  A Picture of a derserts">
+     <p>At Tasty Delights, we believe great great food brings people together.
+        Our passion is creating mouthwatering treats that satisfy every craving favourites.
+        Using only the freshest ingredients and time-tested recipes, we serve up deliciousness with a touch of love in every bite.
+        Whether you are here for a quick snack or your new favourite dessert, welcome to the flavor you have been looking for. 
+     </p>
+  </section>
 
-    
-  
+        <section class="Slideshow-container">
+             <img class="slide" src="images/main-dish1.webp" alt="Slide 1">
+             <img class="slide" src="images/dersert-one.webp" alt="Slide 2">
+             <img class="slide" src="images/main-dish2.webp" alt="Slide 3">
+             <img class="slide" src="images/dersert-three.webp" alt="Slide 4">
+             <img class="slide" src="images/desert-six.jpg" alt="Slide 5">
+             <button class="prev" onclick="plusSlides(-1)">❮</button>
+             <button class="next" onclick="plusSlides(1)">❯</button>
+         </section>
+         
+        <section class="hero">
+            <h2>Discover Delicious Recipes</h2>
+            <p>Explore thousands of recipes and join our community!</p>
+            <a href="recipe-search.html" class="cta-button">Find Recipes Now</a>
+        </section>
+
+        <!-- Join Us Form Section -->
+        <section class="join-us-section">
+            <h2>Join Us Today!</h2>
+            <p>Get exclusive recipes and cooking tips in your inbox.</p>
+            <form id="join-us-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferences">Recipe Preferences (Optional)</label>
+                    <select id="preferences" name="preferences">
+                        <option value="">Select a preference</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten-Free</option>
+                        <option value="quick-meals">Quick Meals</option>
+                        <option value="desserts">Desserts</option>
+                    </select>
+                </div>
+                <button type="submit">Join Now</button>
+            </form>
+            <p id="form-message" class="form-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tasty Delights. Powered by TheMealDB.</p>
+    </footer>
+</body>
+</html>

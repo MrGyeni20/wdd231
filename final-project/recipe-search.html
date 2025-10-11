@@ -1,7 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="Nana Kwesi Gyeni" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta class="description" content="A platform designed to allow users to search for recipes by name , ingredient, or category using a intuitive search bar">
+    <meta class="author" content="Nana Kwesi Gyeni">
+    <title>Tasty Delights| Recipe Search</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+    <script src="scripts/search.js"></script>
+</head>
+<body>
+    <header>
+      <img src="images/recipe-logo.webp" alt="Tasty Delights Logo">
+        <h1>Find Your Recipe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe-search.html">Search Recipes</a></li>
+                <li><a href="detail-recipe.html">Detailed Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <form id="recipe-search-form">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Enter recipe or ingredient (e.g., chicken)" 
+                    required 
+                />
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="search-results" class="results-container">
+            <!-- JavaScript populates recipe cards -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tasty Delights. Powered by TheMealDB.</p>
+    </footer>
+</body>
+</html>

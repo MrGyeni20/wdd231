@@ -1,7 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="Nana Kwesi Gyeni" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta class="description" content="A platform designed to display detailed information about a selected recipe, inluding ingredients, instructionsn, and preparation time">
+    <meta class="author" content="Nana Kwesi Gyeni">
+    <title> Tasty Delights| Recipe Details</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+
+</head>
+<body>
+    <header>
+        <img src="images/recipe-logo.webp" alt="Tasty Delights Logo">
+        <h1>Recipe Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe-search.html">Search Recipes</a></li>
+                <li><a href="detail-recipe.html">Detailed Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recipe-detail" class="recipe-container">
+            <h2 id="recipe-title">Loading...</h2>
+            <img id="recipe-image" src="" alt="Recipe Image" class="recipe-image">
+            <div class="recipe-info">
+                <p><strong>Category:</strong> <span id="recipe-category"></span></p>
+                <p><strong>Cuisine:</strong> <span id="recipe-cuisine"></span></p>
+                <p><strong>Tags:</strong> <span id="recipe-tags"></span></p>
+            </div>
+            <div class="recipe-ingredients">
+                <h3>Ingredients</h3>
+                <ul id="recipe-ingredients-list"></ul>
+            </div>
+            <div class="recipe-instructions">
+                <h3>Instructions</h3>
+                <p id="recipe-instructions"></p>
+            </div>
+            <p class="recipe-source">Source: <a id="recipe-source-link" href="#">Original Recipe</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tasty Delights. Powered by TheMealDB.</p>
+    </footer>
+
+    <script src="scripts/detail.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* ===== Discover Page Cards Only ===== */
+
+#cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #001f3f;
+  margin: 0;
+}
+
+.card figure {
+  margin: 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+}
+
+.card address {
+  font-style: normal;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.card button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}

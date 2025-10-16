@@ -2,56 +2,56 @@
     {
 
         "name":"The Bisa Museum",
-        "image": "Bisa-photo.webp",
+        "image": "fort-1.jpg",
         "address":"Sekondi",
         "description":"Bisa Abrewa Museum is a museum with sculptural representations of wood, clay, cement, paintings and photographs in Nkontompo in the Sekondi-Takoradi Metropolis of the Western Region, Ghana. The museum  has about Two thousand and two hundred artifacts relating to heroes of Africa."
     },
     
     {
         "name":" Coast Castle",
-        "image": "",
+        "image": "fort-3.jpg",
         "address":"Victoria Road",
         "description":"The Coast Castle is one of about forty 'slave castles', or large commercial forts, built on the Gold Coast of West Africa by European traders. It was originally a Portuguese 'feitoria' or trading post, established in 1555, which was named Cabo Corso."
     },
 
      {
         "name":"Fort San Sebastian",
-        "image": "",
+        "image": "fort-4.jpg",
         "address":"296C+88F, Shama",
         "description":"Fort San Sebastian located in Shama, Ghana, is the third oldest fortification in Ghana and it was built in 1523. "
     },
 
      {
         "name":"African Beach",
-        "image": "",
+        "image": "test2.jpg",
         "address":"4 Hood Street",
         "description":"A paradise by the sea"
     },
 
      {
         "name":"Red Mango Resort",
-        "image": "",
+        "image": "mango.jpg",
         "address":"Plot No 22 Shippers Road",
         "description":"One of the best place to lodge, with a very good restaurant, bar , gym, a pool and good customer service"
     },
 
      {
         "name":"Grace Garden",
-        "image": "",
+        "image": "fort-5.jpg",
         "address":"Tower Street",
         "description":"A restaurant and recreational location to kill time to enjoy food and have fun"
     },
 
      {
         "name":"Vienna Beach",
-        "image": "",
+        "image": "test3.jpg",
         "address":"Beach Road",
         "description":"A restaurant on the beach with top notch food and one can enjoy the sea breeze"
     },
 
      {
         "name":"Noble House",
-        "image": "",
+        "image": "cape-fort.webp",
         "address":"M3 Anita Mensah Crescent",
         "description":"A home to all kinds of sweets and juicy delicacies"
     }
